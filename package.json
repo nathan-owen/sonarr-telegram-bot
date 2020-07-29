@@ -3,16 +3,16 @@
   "version": "0.3.0",
   "description": "A Telegram bot to interact with your Sonarr Web App",
   "dependencies": {
-    "bluebird": "v3.0.6",
-    "fs-extra": "^0.26.4",
-    "i18n": "^0.5.0",
+    "bluebird": "v3.7.2",
+    "fs-extra": "9.0.1",
+    "i18n": "^0.10.0",
     "lodash": "^4.0.0",
     "moment": "^2.11.0",
-    "node-cache": "^3.0.0",
-    "node-telegram-bot-api": "^0.19.2",
+    "node-cache": "5.1.2",
+    "node-telegram-bot-api": "0.50.0",
     "request": "^2.67.0",
     "sonarr-api": "^0.2.0",
-    "winston": "^2.1.1"
+    "winston": "^2.4.0"
   },
   "repository": "git://github.com/nathan-owen/sonarr-telegram-bot",
   "keywords": [

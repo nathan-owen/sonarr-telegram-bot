@@ -1,5 +1,5 @@
 /* global __dirname */
-
+process.env.NTBA_FIX_319=1
 'use strict';
 
 var fs          = require('fs');                        // https://nodejs.org/api/fs.html
@@ -547,7 +547,14 @@ function handleUnRevokeUserConfirm(userId, revokedConfirm) {
  * save access control list
  */
 function updateACL() {
-  fs.writeFile(__dirname + '/acl.json', JSON.stringify(acl), function(err) {
+  var aclListFile;
+ if (process.env.TELEGRAM_BOTTOKEN) {
+    aclListFile = '/config/acl.json';
+ } else {
+   aclListFile = __dirname + '/../acl.json';
+ }
+
+  fs.writeFile(aclListFile, JSON.stringify(acl), function(err) {
     if (err) {
       throw new Error(err);
     }
@@ -555,7 +562,6 @@ function updateACL() {
     logger.info(i18n.__('logAclUpdated'));
   });
 }
-
 /*
  * verify user can use the bot
  */
