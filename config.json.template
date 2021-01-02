@@ -17,10 +17,5 @@
     "ssl": false,
     "username": "",
     "password": ""
-  },
-  "defaults" : {
-    "rootFolder": "/",
-    "profileId": 0,
-    "monitor": true
   }
 }
